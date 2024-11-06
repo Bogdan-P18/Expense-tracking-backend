@@ -1,4 +1,4 @@
-package expense_tracker_backend.model;
+package expense_tracker_backend.expense_tracker.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
