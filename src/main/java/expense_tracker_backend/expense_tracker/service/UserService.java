@@ -13,7 +13,8 @@ public class UserService {
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
     public User register(User user) {
-        user.setPassword(encoder.encode(user.getPassword()));
+        final String PREFIX = "{bcrypt}";
+        user.setPassword(PREFIX + encoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 }
